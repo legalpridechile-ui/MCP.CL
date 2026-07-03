@@ -22,7 +22,7 @@ from typing import List, Optional
 from mcp.server.fastmcp import FastMCP
 from pydantic import BaseModel, ConfigDict, Field
 
-from .data_loader import store
+from data_loader import store
 
 mcp = FastMCP("vibecodingchile_mcp")
 
@@ -448,8 +448,6 @@ def mapear_control_iso42001(descripcion_proceso: str) -> str:
         f"Proceso:\n{descripcion_proceso}"
     )
 
-        f"Una vez tengas todos los datos, entrégame el documento final listo para firmar."
-    )
 
 @mcp.prompt(name="redactar-documento-praxis")
 def redactar_documento_praxis(nombre_plantilla: str, contexto_caso: str = "") -> str:
@@ -466,8 +464,10 @@ def redactar_documento_praxis(nombre_plantilla: str, contexto_caso: str = "") ->
         f"Una vez tengas todos los datos, entrégame el documento final listo para firmar."
     )
 
-7def main() -> None:
+
+def main() -> None:
     mcp.run()
+
 
 if __name__ == "__main__":
     main()
