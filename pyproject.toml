@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vibecodingchile-mcp"
+version = "0.1.0"
+description = "VibeCodingChile MCP Server - Ontología de cumplimiento (Ley N°21.719, ISO/IEC 42001, EU AI Act)"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Matías Rojas Faúndez", email = "Vibecodingchile.dev@vibecodingchile.cl"}
+]
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: FastAPI",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "mcp",
+    "fastmcp",
+    "pydantic",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "black",
+    "ruff",
+]
+
+[project.scripts]
+vibecodingchile-mcp = "server:main"
+
+[tool.setuptools]
+py-modules = ["server", "data_loader"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
