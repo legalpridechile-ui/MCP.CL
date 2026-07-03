@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "version": "1.0",
+    "description": "Ontología de Cumplimiento Normativo VibeCodingChile",
+    "author": "Matías Rojas Faúndez"
+  },
+  "branches": [
+    {
+      "id": "ley_21719",
+      "label_es": "Ley N°21.719 (Protección de Datos Chile)",
+      "description": "Marco regulatorio chileno para el tratamiento de datos personales."
+    },
+    {
+      "id": "iso_42001",
+      "label_es": "ISO/IEC 42001 (Sistema de Gestión de IA)",
+      "description": "Estándar internacional para el desarrollo y uso ético de la IA."
+    },
+    {
+      "id": "eu_ai_act",
+      "label_es": "EU AI Act",
+      "description": "Ley de Inteligencia Artificial de la Unión Europea (Marco de riesgo)."
+    },
+    {
+      "id": "gobernanza_ia",
+      "label_es": "Gobernanza IA VibeCodingChile",
+      "description": "Terminología y herramientas propias de VibeCodingChile."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "base_licitud",
+      "branch": "ley_21719",
+      "parent": null,
+      "label_es": "Base de Licitud",
+      "label_en": "Lawful Basis",
+      "definition_es": "Fundamento legal que autoriza el tratamiento de datos personales según la normativa.",
+      "aliases": ["base legal", "legitimidad"],
+      "frameworks": ["ley_21719", "gdpr"]
+    },
+    {
+      "id": "consentimiento",
+      "branch": "ley_21719",
+      "parent": "base_licitud",
+      "label_es": "Consentimiento",
+      "label_en": "Consent",
+      "definition_es": "Manifestación de voluntad libre, específica, informada e inequívoca del titular.",
+      "aliases": ["opt-in", "autorización expresa"],
+      "frameworks": ["ley_21719"]
+    },
+    {
+      "id": "eipd",
+      "branch": "ley_21719",
+      "parent": null,
+      "label_es": "Evaluación de Impacto en la Protección de Datos (EIPD)",
+      "label_en": "Data Protection Impact Assessment (DPIA)",
+      "definition_es": "Proceso para describir el tratamiento, evaluar su necesidad y proporcionalidad, y gestionar los riesgos para los derechos de los titulares.",
+      "aliases": ["evaluación de impacto", "DPIA"],
+      "frameworks": ["ley_21719"]
+    },
+    {
+      "id": "actor_cadena_responsabilidad",
+      "branch": "ley_21719",
+      "parent": null,
+      "label_es": "Actor de la Cadena de Responsabilidad (IMDA)",
+      "label_en": "Value Chain Actor",
+      "definition_es": "Entidad que participa en el desarrollo, provisión o implementación de un sistema de IA, asumiendo obligaciones específicas.",
+      "aliases": ["cadena de valor", "responsable IA"],
+      "frameworks": ["ley_21719", "eu_ai_act"]
+    },
+    {
+      "id": "riesgo_alto",
+      "branch": "eu_ai_act",
+      "parent": null,
+      "label_es": "Sistema de IA de Alto Riesgo",
+      "label_en": "High-Risk AI System",
+      "definition_es": "Sistemas de IA que suponen un riesgo significativo para la salud, la seguridad o los derechos fundamentales.",
+      "aliases": ["alto riesgo", "high risk"],
+      "frameworks": ["eu_ai_act"]
+    },
+    {
+      "id": "sgia",
+      "branch": "iso_42001",
+      "parent": null,
+      "label_es": "Sistema de Gestión de Inteligencia Artificial (SGIA)",
+      "label_en": "AI Management System (AIMS)",
+      "definition_es": "Marco para establecer, implementar, mantener y mejorar continuamente la gestión de sistemas de IA en una organización.",
+      "aliases": ["AIMS", "sistema de gestión IA"],
+      "frameworks": ["iso_42001"]
+    },
+    {
+      "id": "checkwizard",
+      "branch": "gobernanza_ia",
+      "parent": null,
+      "label_es": "CheckWizard",
+      "label_en": "CheckWizard",
+      "definition_es": "Interfaz interactiva de VibeCodingChile para el análisis de riesgos y cumplimiento normativo en IA.",
+      "aliases": ["wizard", "evaluador de cumplimiento"],
+      "frameworks": ["gobernanza_ia"]
+    }
+  ]
+}
